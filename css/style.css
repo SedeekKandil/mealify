@@ -1,0 +1,936 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    position: relative;
+    background-color: white;
+    font-family: "Segoe UI";
+}
+
+nav .div{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+nav .div .container{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+
+}
+
+nav .div .container .navs{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+nav .div .container .navs ul{
+
+    list-style: none;
+    display: flex;
+}
+
+nav .div .container .logo{
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav .div .container .logo h1{
+
+    color: #212529;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+}
+
+nav .div .container .logo h1::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #CE1212;
+    top: 23;
+}
+
+nav .div .container .moon{
+    width: 25%;
+    display: flex;
+    justify-content: end;
+}
+
+nav .div .container .moon i{
+    color: #212529;
+    font-size: 25px;
+}
+
+nav .div .container .navs ul li{
+    margin: 15px;
+}
+
+nav .div .container .navs ul li a{
+    text-decoration: none;
+    
+    color: #7F7F90;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all .5s;
+    position: relative;
+}
+
+nav .div .container .navs ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: #CE1212;
+    height: 2.5px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: all .5s;
+}
+
+nav .div .container .navs ul li a:hover:after{
+    width: 100%;
+}
+
+nav .div .container .navs ul li a:hover{
+    color: #000000;
+}
+
+nav .div .container .navs ul li a.active{
+    color: #000000;
+}
+
+nav .div .container .navs ul li a.active::after{
+    content: "";
+    position: absolute;
+    background-color: #CE1212;
+    height: 2.5px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    transition: all .5s;
+}
+
+
+
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    background-color: #EEEEEE;
+}
+
+header .container{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+header .container .describe{
+    width: 40%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+header .container .dish{
+    width: 60%;
+    display: flex;
+    justify-content: end;
+}
+
+header .container .describe h2{
+    color: #37373F;
+    font-size: 65px;
+    font-weight: 700;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+header .container .describe p{
+    color: #4F4F5A;
+    font-size: 16px;
+    line-height: 25.6px;
+    font-family: "Segoe UI";
+    font-weight: 400;
+}
+
+header .container .describe .first{
+    padding: 10px 25px;
+    margin-right: 25px ;
+    margin-top: 24px;
+    background-color: #CE1212;
+    border: none;
+    border-radius: 35px;
+    border-top-left-radius: 0;
+    transition: background-color 1s;
+}
+
+header .container .describe .first:hover{
+    background-color: #E61414;
+}
+
+header .container .describe .first a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: "Segoe UI";
+}
+
+header .container .describe .sec{
+    padding: 20px 25px;
+    margin-left: 25px;
+    border: none;
+}
+
+
+
+header .container .describe .sec a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Segoe UI";
+    transition: color 1s;
+}
+
+header .container .describe .sec a:hover{
+    color: #E61414;
+}
+
+header .container .describe .sec a i{
+    margin-right:10px ;
+    padding-top: 5px;
+    background-color: white;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    border: 10px solid #CE1212;
+    border-radius: 50%;
+    border-bottom-color: #EEEEEE;
+    border-right-color: #EEEEEE;
+
+}
+
+
+
+
+
+header .container .dish img{
+    width: 70%;
+    filter: drop-shadow(0 0 0.75rem rgb(86, 76, 78));
+}
+
+header .container .dish img:hover { 
+    animation: Shake 0.3s linear infinite; 
+} 
+  
+/*Using keyframes for shaking an image*/
+@keyframes Shake { 
+    0% { 
+        transform: rotate(1deg); 
+    } 
+  
+    25% { 
+        transform: rotate(-1deg); 
+    } 
+  
+    50% { 
+        transform: rotate(1deg); 
+    } 
+  
+    75% { 
+        transform: rotate(-1deg); 
+    } 
+  
+    100% { 
+        transform: rotate(1deg); 
+    } 
+}
+
+#chefs{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+#chefs .container{
+    width: 85%;
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    
+}
+
+#chefs .container h2{
+    color: #7F7F90;
+    font-size:14px ;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+#chefs .container p{
+    color: #212529;
+    font-size: 50px;
+    font-weight: 400;
+    font-family: 'Amatic SC', sans-serif;
+    text-align: center;
+}
+
+#chefs .container span{
+    color: #CE1212;
+}
+
+#chefs .container .chefs{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#chefs .container .chefs .chef{
+    width: 33%;
+    position: relative;
+    transition: transform .5s ;
+    padding: 0 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+#chefs .container .chef:hover ul{
+    right: 5;
+}
+
+#chefs .container .chef:hover{
+    transform: scale(1.1);
+}
+
+#chefs .container .chef img{
+    width: 100%;
+    
+}
+
+#chefs .container .chef::before{
+
+    content: "";
+    position: absolute;
+    bottom: 170px;
+    left: 0;
+    background-image: url(../img/team-shape.svg);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 3.75rem;
+
+}
+
+
+
+
+#chefs .container .chef h3{
+    color: #212529;
+    font-size: 18.72px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+
+#chefs .container .chef p{
+    color: #7F7F90;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Segoe UI";
+    font-style: italic;
+}
+
+#chefs .container .chef ul{
+    background-color:RGBA(255, 255, 255, 0.3);
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: -100;
+    margin-right: 10px;
+    border-radius: 5px;
+    width: 20%;
+    transition: right .5s .5s;
+}
+
+#chefs .container .chef ul i{
+    color: #96908D;
+    font-size: 18px;
+    padding: 10px 0px 10px 0;
+    transition: color .5s;
+}
+
+#chefs .container .chef ul i:hover{
+    color: #48474D;
+}
+
+#gallery{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    background-color: #EEEEEE;
+}
+
+#gallery .container{
+    width: 85%;
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+#gallery .container h2{
+    color: #7F7F90;
+    font-size:14px ;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+#gallery .container p{
+    color: #212529;
+    font-size: 50px;
+    font-weight: 400;
+    font-family: 'Amatic SC', sans-serif;
+    text-align: center;
+}
+
+#gallery .container span{
+    color: #CE1212;
+}
+
+#gallery .container .images{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#gallery .container .images .column{
+    width: 33%;
+    padding: 0 10px;
+}
+
+#gallery .container .images img{
+    width: 100%;
+    
+    border: white 5px solid;
+    transition: transform .5s;
+
+}
+
+#gallery .container .images .column .overlay h2{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+#gallery .container .images .column .overlay p{
+    color:#DDDDDD ;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Segoe UI";
+}
+
+#gallery .container .images .column .overlay{
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#gallery .container .images .column .overlay .img1{
+    background-color: RGBA(0, 0, 0, 0.59);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#gallery .container .images .column .overlay:hover .img1{
+    top: 0;
+    transform: scale(1.1);
+}
+
+#gallery .container .images .column .overlay:hover img{
+    transform: scale(1.1);
+}
+
+#gallery .container .images .column .overlay .img2{
+    background-color: RGBA(0, 0, 0, 0.59);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#gallery .container .images .column .overlay:hover .img2{
+    top: 0;
+    transform: scale(1.1);
+}
+
+#gallery .container .images .column .overlay .img3{
+    background-color: RGBA(0, 0, 0, 0.59);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#gallery .container .images .column .overlay:hover .img3{
+    top: 0;
+    transform: scale(1.1);
+}
+
+#gallery .container .images .column .overlay .img4{
+    background-color: RGBA(0, 0, 0, 0.59);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#gallery .container .images .column .overlay:hover .img4{
+    top: 0;
+    transform: scale(1.1);
+}
+
+#gallery .container .images .column .overlay .img5{
+    background-color: RGBA(0, 0, 0, 0.59);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#gallery .container .images .column .overlay:hover .img5{
+    top: 0;
+    transform: scale(1.1);
+}
+
+#gallery .container .images .column .overlay .img6{
+    background-color: RGBA(0, 0, 0, 0.59);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#gallery .container .images .column .overlay:hover .img6{
+    top: 0;
+    transform: scale(1.1);
+}
+
+#gallery .container .images .column .overlay .img7{
+    background-color: RGBA(0, 0, 0, 0.59);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#gallery .container .images .column .overlay:hover .img7{
+    top: 0;
+    transform: scale(1.1);
+}
+
+#contact{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+#contact .container{
+    width: 85%;
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+#contact .container h2{
+    color: #7F7F90;
+    font-size:14px ;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+#contact .container p{
+    color: #212529;
+    font-size: 50px;
+    font-weight: 400;
+    font-family: 'Amatic SC', sans-serif;
+    text-align: center;
+}
+
+#contact .container span{
+    color: #CE1212;
+}
+
+#contact .container iframe{
+    width: 100%;
+}
+
+#contact .container .contacts{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+#contact .container .contacts .demo{
+    width: 50%;
+    padding: 10px;
+}
+
+#contact .container .contacts .demo .info{
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    
+}
+
+#contact .container .contacts .demo .info .icon{
+    background-color: #CE1212;
+    border-radius: 50%;
+    border: #CE1212 solid 17px;
+    margin-right: 10px;
+}
+
+#contact .container .contacts .demo .info .icon i{
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+#contact .container .contacts .demo .info .des h3{
+    color: #7D7D7D;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+#contact .container .contacts .demo .info .des p{
+    color: #212529;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Segoe UI";
+    text-align: start;
+}
+
+#container .container .forms {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+#contact .container .forms form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .container .forms form .inputs{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+}
+
+#contact .container .forms form .input{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    
+}
+
+#contact .container .forms form .input input{
+    padding: 15px 10px;
+    width: 100%;
+    color: #212529;
+}
+
+#contact .container .forms form .inputs input{
+    width: 50%;
+    padding: 15px 10px;
+    margin: 0 10px 0 0;
+    color: #212529;
+
+}
+
+#contact .container .forms form .text{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+
+}
+
+#contact .container .forms form .text textarea{
+    padding: 15px 10px;
+    width: 100%;
+    color: #212529;
+}
+
+#contact .container .forms form button{
+    color: #FFFFFF;
+    background-color: #E61414;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 25px 0px 0px;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+footer{
+    background-image: url(../img/textured-metal-background.jpg);
+    background-size: 100% 100%;
+    
+    padding-bottom: 5px;
+}
+
+footer .overlay{
+    width: 100%;
+    background-color: RGBA(0, 0, 0, 0.59);
+    display: flex;
+    justify-content: center;
+}
+
+footer .container {
+    width: 85%;
+    margin-top: 50px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+footer .container .footer1{
+    width: 25%;
+    padding: 0 20px;
+}
+
+footer .container .footer1 .img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+footer .container .footer1 .img img{
+    width: 10%;
+}
+
+footer .container .footer1 .img h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    padding-left: 15px;
+    font-family: "Segoe UI";
+
+}
+
+footer .container .footer1 .img h2::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #CE1212;
+    top: 23;
+}
+
+footer .container p{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Segoe UI";
+}
+
+footer .container h3{
+    color: white;
+    font-size: 18.72px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+footer .container .footer1 h3{
+    text-align: center;
+    position: relative;
+}
+
+footer .container .footer1 h3::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 30px;
+    left: 0px;
+    background-color: #96908D;
+}
+
+footer .container .footer1 ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+footer .container .footer1 ul li{
+    font-size: 24px;
+    padding: 0 25px;
+}
+
+footer .container .footer1 ul li a{
+    color: white;
+}
+
+footer .container .footer2{
+ width: 50%;  
+ padding: 0 20px;
+ 
+}
+
+
+
+footer .container .footer2 .form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .footer2 .form input{
+    width: 100%;
+    padding: 10px 15px;
+    color: #212529;
+
+}
+
+footer .container .footer2 .form button{
+    display: flex;
+    padding: 10px 15px;
+    background-color: #CE1212;
+    border: none;
+    margin-left: 5px;
+    transition: background-color 1s;
+}
+
+    
+footer .container .footer2 .form button:hover{
+    background-color: #E61414;
+}
+
+footer .container .footer2 .form button i{
+    margin-right: 5px;
+    font-size: 15px;
+    color: white;
+}
+
+footer .container .footer2 .form button span{
+    color: white;
+    font-size: 15px;
+}
+
+footer .container .footer2 ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .container .footer2 ul li{
+    color: white;
+    width: 45%;
+    margin: 0 0 0 10px;
+    padding: 5px 0;
+    transition: all .5s;
+}
+
+footer .container .footer2 ul li:hover{
+    background-color: #222222;
+    padding-left: 10px;
+}
+
+footer .container .footer2 ul li i{
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+footer .container ul li span{
+    color: white;
+    font-size: 16px;
+    font-family: "Segoe UI";
+}
+
+footer .container .footer3{
+    padding: 0 20px;
+}
+
+footer .container .footer3 ul{
+    list-style: none;
+}
+
+footer .container .footer3 ul li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 15px;
+}
+
+footer .container .footer3 ul li i{
+    color: #CE1212;
+    font-size: 22px;
+    width: 20%;
+}
+
+footer .container .footer3 ul li span{
+    width: 80%;
+}
